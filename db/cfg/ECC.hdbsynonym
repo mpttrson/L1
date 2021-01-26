@@ -1,0 +1,8 @@
+{
+  "S_TCURR": {
+    "target": {
+      "object": "TCURR",
+      "schema": "ECC"
+    }
+  }
+}
