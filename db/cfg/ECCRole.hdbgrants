@@ -1,0 +1,14 @@
+{
+	"ups_ecc": {
+		"object_owner": {
+			"global_roles": [{
+				"roles": ["UPS_ECC_ROLE"]
+			}]
+		},
+		"application_user": {
+			"global_roles": [{
+				"roles": ["UPS_ECC_ROLE"]
+			}]
+		}
+	}
+}

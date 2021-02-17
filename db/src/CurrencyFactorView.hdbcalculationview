@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CurrencyFactorView" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CurrencyFactorView"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="S_TCURF">
+    <resourceUri>S_TCURF</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="MANDT"/>
+      <viewAttribute id="KURST"/>
+      <viewAttribute id="FCURR"/>
+      <viewAttribute id="TCURR"/>
+      <viewAttribute id="GDATU"/>
+      <viewAttribute id="FFACT"/>
+      <viewAttribute id="TFACT"/>
+      <viewAttribute id="ABWCT"/>
+      <viewAttribute id="ABWGA"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="S_TCURF">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KURST" source="KURST"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FCURR" source="FCURR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TCURR" source="TCURR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GDATU" source="GDATU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FFACT" source="FFACT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TFACT" source="TFACT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ABWCT" source="ABWCT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ABWGA" source="ABWGA"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="MANDT" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Client"/>
+      <keyMapping columnObjectName="Projection_1" columnName="MANDT"/>
+    </attribute>
+    <attribute id="KURST" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Exchange Rate Type"/>
+      <keyMapping columnObjectName="Projection_1" columnName="KURST"/>
+    </attribute>
+    <attribute id="FCURR" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="From currency"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FCURR"/>
+    </attribute>
+    <attribute id="TCURR" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="To-currency"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TCURR"/>
+    </attribute>
+    <attribute id="GDATU" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Date from which the entry is valid"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GDATU"/>
+    </attribute>
+    <attribute id="FFACT" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Ratio for the &quot;From&quot; Currency Units"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FFACT"/>
+    </attribute>
+    <attribute id="TFACT" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Ratio for the &quot;To&quot; Currency Units"/>
+      <keyMapping columnObjectName="Projection_1" columnName="TFACT"/>
+    </attribute>
+    <attribute id="ABWCT" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Alternative exchange rate type"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ABWCT"/>
+    </attribute>
+    <attribute id="ABWGA" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Date from which the alternative exchange rate type is valid"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ABWGA"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="219"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

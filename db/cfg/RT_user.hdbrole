@@ -1,0 +1,24 @@
+{
+	"role": {
+		"name": "Y_RT_USER",
+		"object_privileges": [{
+			"name": "CurrencyMainView",
+			"type": "VIEW",
+			"privileges": [
+				"SELECT"
+			]
+		}, {
+			"name": "CurrencyRateView",
+			"type": "VIEW",
+			"privileges": [
+				"SELECT"
+			]
+		}, {
+			"name": "CurrencyFactorView",
+			"type": "VIEW",
+			"privileges": [
+				"SELECT"
+			]
+		}]
+	}
+}

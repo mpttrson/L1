@@ -4,5 +4,17 @@
       "object": "TCURR",
       "schema": "ECC"
     }
+  },
+  "S_TCURC": {
+    "target": {
+      "object": "TCURC",
+      "schema": "ECC"
+    }
+  },
+  "S_TCURF": {
+    "target": {
+      "object": "TCURF",
+      "schema": "ECC"
+    }
   }
 }

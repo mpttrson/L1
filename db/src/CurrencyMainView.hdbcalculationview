@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CurrencyMainView" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Currency Main View"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="S_TCURC">
+    <resourceUri>S_TCURC</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="MANDT"/>
+      <viewAttribute id="WAERS"/>
+      <viewAttribute id="ISOCD"/>
+      <viewAttribute id="ALTWR"/>
+      <viewAttribute id="GDATU"/>
+      <viewAttribute id="XPRIMARY"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="S_TCURC"/></calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="MANDT" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Client"/>
+      <keyMapping columnObjectName="Projection_1" columnName="MANDT"/>
+    </attribute>
+    <attribute id="WAERS" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Currency Key"/>
+      <keyMapping columnObjectName="Projection_1" columnName="WAERS"/>
+    </attribute>
+    <attribute id="ISOCD" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ISO currency code"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ISOCD"/>
+    </attribute>
+    <attribute id="ALTWR" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Alternative key for currencies"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ALTWR"/>
+    </attribute>
+    <attribute id="GDATU" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Date until which the currency is valid"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GDATU"/>
+    </attribute>
+    <attribute id="XPRIMARY" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Primary SAP Currency Code for ISO Code"/>
+      <keyMapping columnObjectName="Projection_1" columnName="XPRIMARY"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

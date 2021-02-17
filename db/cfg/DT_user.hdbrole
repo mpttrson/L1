@@ -1,0 +1,26 @@
+{
+	"role": {
+		"name": "Y_DT_USER#",
+		"object_privileges": [{
+				"name": "CurrencyMainView",
+				"type": "VIEW",
+				"privileges_with_grant_option": [
+					"SELECT"
+				]
+			}, {
+				"name": "CurrencyRateView",
+				"type": "VIEW",
+				"privileges_with_grant_option": [
+					"SELECT"
+				]
+			}, {
+				"name": "CurrencyFactorView",
+				"type": "VIEW",
+				"privileges_with_grant_option": [
+					"SELECT"
+				]
+			}
+
+		]
+	}
+}
